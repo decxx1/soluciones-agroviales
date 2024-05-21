@@ -1,5 +1,8 @@
 # build output
 dist/
+public/robots.txt
+public/sitemap.xml
+public/.htaccess
 # generated types
 .astro/
 
