@@ -2,6 +2,10 @@
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import WhatsApp from '@/components/WhatsApp.astro';
+// Supports weights 100-900
+import '@fontsource-variable/montserrat';
+// Supports weights 300-800
+import '@fontsource-variable/open-sans';
 interface Props {
 	title: string;
 	canonical: string;
@@ -27,7 +31,7 @@ const {
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<!-- Favicons -->
-		<link rel="icon" href="images/favicon.png" type="image/png" />
+		<link rel="icon" href="logo.svg" type="image/svg" />
 		<title>{title}</title>
 		
 		<!-- SEO -->
@@ -59,7 +63,7 @@ const {
 			<link rel="preload" as="image" href={preLoad} type="image/webp" />
 		}
 	</head>
-	<body class="dark:bg-gray-900 scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700">
+	<body class="dark font-OpenSans dark:bg-gray-900 scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700">
 		<Header />
 			<main>
 				<slot />

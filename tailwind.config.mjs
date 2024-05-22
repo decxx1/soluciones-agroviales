@@ -5,7 +5,6 @@ export default {
 		'./node_modules/flowbite/**/*.js'
 	],
 	theme: {
-		extend: {},
 		colors: {
 			primary: {
 				'50': '#fefbe8',
@@ -21,6 +20,12 @@ export default {
 				'950': '#431e05',
 			},
 		},
+		extend: {
+            fontFamily: {
+                OpenSans: ['Open Sans Variable', 'sans-serif'],
+                Montserrat: ['Montserrat Variable', 'sans-serif'],
+            },
+        },
 	},
 	plugins: [
 		require('flowbite/plugin')
