@@ -1,5 +1,4 @@
 ---
-import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import WhatsApp from '@/components/WhatsApp.astro';
 // Supports weights 100-900
@@ -63,8 +62,7 @@ const {
 			<link rel="preload" as="image" href={preLoad} type="image/webp" />
 		}
 	</head>
-	<body class="dark font-OpenSans dark:bg-gray-900 scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700">
-		<Header />
+	<body class="font-OpenSans dark:bg-gray-800 scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700">
 			<main>
 				<slot />
 			</main>
@@ -82,16 +80,15 @@ initDropdowns();
 </script>
 <!--  DARK MODE -->
 <script is:inline>
-	if (
-		localStorage.getItem('color-theme') === 'dark' ||
+	if (!('initColorMode' in localStorage) || localStorage.getItem('color-theme') === 'dark' ||
 		(!('color-theme' in localStorage) &&
 			window.matchMedia('(prefers-color-scheme: dark)').matches)
 	) {
+		localStorage.setItem('initColorMode', true);
 		document.documentElement.classList.add('dark');
 	} else {
 		document.documentElement.classList.remove('dark');
 	}
-	
 </script>
 <style is:global>
 /*recaptcha*/

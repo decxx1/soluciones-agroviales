@@ -1,0 +1,77 @@
+[
+    {
+      "alt": "Caterpillar",
+      "src": "images/marcas/caterpillar.webp",
+      "width": 160
+    },
+    {
+      "alt": "John Deere",
+      "src": "images/marcas/john-deere.webp",
+      "width": 160
+    },
+    {
+      "alt": "Chenggong",
+      "src": "images/marcas/chenggong_ancho.webp",
+      "width": 160
+    },
+    {
+      "alt": "Michigan",
+      "src": "images/marcas/michigan.webp",
+      "width": 160
+    },
+    {
+      "alt": "Luigong",
+      "src": "images/marcas/liugong.webp",
+      "width": 160
+    },
+    {
+      "alt": "Komatsu",
+      "src": "images/marcas/komatsu.webp",
+      "width": 160
+    },
+    {
+      "alt": "XCMG",
+      "src": "images/marcas/xcmg.webp",
+      "width": 160
+    },
+    {
+      "alt": "Terex",
+      "src": "images/marcas/terex.webp",
+      "width": 160
+    },
+    {
+      "alt": "SDLG",
+      "src": "images/marcas/sdlg.webp",
+      "width": 160
+    },
+    {
+      "alt": "Volvo",
+      "src": "images/marcas/volvo.webp",
+      "width": 160
+    },
+    {
+      "alt": "New Holland",
+      "src": "images/marcas/newholland.webp",
+      "width": 160
+    },
+    {
+      "alt": "LonKing",
+      "src": "images/marcas/lonking.webp",
+      "width": 160
+    },
+    {
+      "alt": "JCB",
+      "src": "images/marcas/jcb.webp",
+      "width": 160
+    },
+    {
+      "alt": "CASE",
+      "src": "images/marcas/case.webp",
+      "width": 160
+    },
+    {
+      "alt": "Hyundai",
+      "src": "images/marcas/hyundai.webp",
+      "width": 160
+    }
+]
