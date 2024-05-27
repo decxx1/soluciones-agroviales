@@ -62,14 +62,22 @@ const {
 			<link rel="preload" as="image" href={preLoad} type="image/webp" />
 		}
 	</head>
-	<body class="font-OpenSans dark:bg-gray-800 scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700">
-			<main>
+	<body class="font-OpenSans scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700">
+		<div class="fixed left-0 top-0 -z-10 h-full w-full">
+			<div class="relative h-full w-full bg-gray-900">
+				
+				<div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#374151,#111827)]">
+				</div>
+			</div>
+		</div>
+		<main>
 				<slot />
 			</main>
 			<WhatsApp />
 		<Footer />
 	</body>
 </html>
+
 <script>
 import {
     initDropdowns,

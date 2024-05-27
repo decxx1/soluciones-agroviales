@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/Header.astro';
 import ContactForm from '@/components/ContactForm.astro';
+import ContactInfo from '@/components/ContactInfo.astro';
 ---
 
 <Layout 
@@ -12,5 +13,14 @@ import ContactForm from '@/components/ContactForm.astro';
 	metaImg=""
 >
     <Header />
+    <section class="container mx-auto">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="px-4 mx-auto max-w-screen-sm text-center lg:px-6 mb-8 lg:mb-16">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Contáctenos</h2>
+                <p class="font-light text-gray-600 dark:text-gray-400 sm:text-xl">Obtenga cotización sin cargo</p>
+            </div>
+        </div>
+    </section>
+    <ContactInfo />
     <ContactForm />
 </Layout>
