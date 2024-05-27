@@ -1,7 +1,28 @@
+---
+import Whatsapp from "@/icons/Whatsapp.astro"
+import {
+    telAdminLinkeable,
+} from '@/hooks/env.js'
+---
 <section class="bg-primary-400 dark:bg-primary-500 py-20 mx-auto my-20">
-    <div class="text-center">
-        <h2 class="max-w-4xl mx-auto text-3xl md:text-4xl lg:text-5xl font-bold leading-none tracking-tight text-gray-900 dark:text-gray-800">
-            Contáctenos ahora para obtener una cotización
-        </h2>
+    <div
+        class="gap-8 items-center justify-between px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 lg:px-6">
+        <div>
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-primary-950 dark:text-gray-800">Contáctenos ahora para obtener una cotización</h2>
+            <p class="mb-6 font-normal text-primary-900 md:text-lg dark:text-gray-800">¡Consulte sin cargo!</p>
+
+        </div>
+        <div class="items-end grid">
+            <a href={'https://wa.me/' + telAdminLinkeable}
+                class="w-full sm:w-auto bg-[#25d366] hover:bg-[#128C7E] focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:focus:ring-gray-800">
+                
+                <Whatsapp extraClass="w-7 h-7 mr-3"/>
+                <div class="text-left">
+                    <div class="mb-1 text-xs">Consúltenos</div>
+                    <div class="-mt-1 font-sans text-sm font-semibold">WhatsApp</div>
+                </div>
+            </a>
+
+        </div>
     </div>
 </section>
