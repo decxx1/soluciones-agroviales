@@ -91,7 +91,6 @@ initDropdowns();
 		(!('color-theme' in localStorage) &&
 			window.matchMedia('(prefers-color-scheme: dark)').matches)
 	) {
-		// localStorage.setItem('initColorMode', true);
 		document.documentElement.classList.add('dark');
 	} else {
 		document.documentElement.classList.remove('dark');
