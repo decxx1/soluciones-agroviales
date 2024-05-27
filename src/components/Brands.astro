@@ -3,10 +3,10 @@ import brands from '@/data/Brands.json'
 ---
 <section class="container px-6 py-10 mx-auto">
     <div class="text-center">
-        <h2 class="mb-4 max-w-xl mx-auto text-2xl md:text-3xl lg:text-4xl font-bold leading-none tracking-tight text-gray-900 dark:text-primary-300">
+        <h2 class="mb-4 max-w-xl mx-auto text-2xl md:text-3xl lg:text-4xl font-bold leading-none tracking-tight text-primary-300 dark:text-primary-300">
             Marcas
         </h2>
-        <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+        <p class="mb-6 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
             Trabajamos con maquinarias viales de todas las marcas
         </p>
     </div>
@@ -14,7 +14,7 @@ import brands from '@/data/Brands.json'
     <!-- Permanent -->
     <div class="max-md:hidden mt-6 space-y-4 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-4 xl:gap-8 md:space-y-0 md:mb-8 md:mt-12">
         {brands.map((brand) => (
-            <div class="flex justify-center items-center p-4 text-center bg-gray-50 rounded hover:bg-gray-100 dark:hover:bg-gray-600 dark:bg-gray-700">
+            <div class="flex justify-center items-center p-4 text-center bg-gray-600 rounded hover:bg-gray-500 dark:hover:bg-gray-600 dark:bg-gray-700">
                 <img loading="lazy" src={brand.src} alt={brand.alt} class="w-48" />
             </div>
         ))}
@@ -25,7 +25,7 @@ import brands from '@/data/Brands.json'
         <!-- Carousel wrapper -->
         <div class="relative h-32 sm:h-40 overflow-hidden rounded-lg">
             {brands.map((brand) => (
-                <div class="hidden duration-700 ease-in-out p-4 text-center bg-gray-50 rounded hover:bg-gray-100 dark:hover:bg-gray-600 dark:bg-gray-700" data-carousel-item>
+                <div class="hidden duration-700 ease-in-out p-4 text-center bg-gray-600 rounded hover:bg-gray-500 dark:hover:bg-gray-600 dark:bg-gray-700" data-carousel-item>
                     <img loading="lazy" src={brand.src} alt={brand.alt} class="absolute block w-72 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
                 </div>
             ))}

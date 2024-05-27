@@ -1,1 +1,10 @@
-<div></div>
+---
+import WhatsappButton from '@/icons/Whatsapp.astro'
+import {
+    telAdminLinkeable,
+} from '@/hooks/env.js'
+---
+<a class="float-button flex" target="_blank" href={'https://wa.me/54' + telAdminLinkeable}>
+    <WhatsappButton extraClass="mr-1 w-8 h-8 sm:w-6 sm:h-6" />
+    <span class="font-semibold">Consultas<span>
+</a>

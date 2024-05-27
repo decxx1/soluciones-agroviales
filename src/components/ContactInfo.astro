@@ -13,45 +13,45 @@ import {
     address,
     schedules,
     email,
-    instagram,
+    mapUrl,
 } from '@/hooks/env.js';
 ---
 <section class="container mx-auto my-20">
     <div class="grid grid-cols-1 gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
         <div>
-            <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-gray-100 rounded-lg dark:bg-gray-800 lg:h-16 lg:w-16">
-                <svg class="w-5 h-5 text-gray-600 lg:w-8 lg:h-8 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+            <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-gray-700 rounded-lg dark:bg-gray-800 lg:h-16 lg:w-16">
+                <svg class="w-5 h-5 text-primary-300 lg:w-8 lg:h-8 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
             </div>
-            <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Dirección:</p>
-            <p class="text-gray-500 dark:text-gray-400">{address}</p>
+            <p class="mb-2 text-xl font-bold text-white dark:text-white">Dirección:</p>
+            <a href={mapUrl} class="text-gray-300 dark:text-gray-400">{address}</a>
         </div>
         <div>
-            <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-gray-100 rounded-lg dark:bg-gray-800 lg:h-16 lg:w-16">
-                <svg class="w-5 h-5 text-gray-600 lg:w-8 lg:h-8 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M17 7h6v16H7v-4m16-8h-6M13 0v3M1 7h16M1 3h16v16H1zm4-3v3m-1 8h2m2 0h6M4 15h2m2 0h6"/></svg>
+            <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-gray-700 rounded-lg dark:bg-gray-800 lg:h-16 lg:w-16">
+                <svg class="w-5 h-5 text-primary-300 lg:w-8 lg:h-8 dark:text-primary-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M17 7h6v16H7v-4m16-8h-6M13 0v3M1 7h16M1 3h16v16H1zm4-3v3m-1 8h2m2 0h6M4 15h2m2 0h6"/></svg>
             </div>
-            <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Horario de atención</p>
-            <p class="text-gray-500 dark:text-gray-400">{schedules}</p>
+            <p class="mb-2 text-xl font-bold text-white dark:text-white">Horario de atención</p>
+            <p class="text-gray-300 dark:text-gray-400">{schedules}</p>
         </div>
         
         <div>
-            <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-gray-100 rounded-lg dark:bg-gray-800 lg:h-16 lg:w-16">
-                <svg class="w-5 h-5 text-gray-600 lg:w-8 lg:h-8 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+            <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-gray-700 rounded-lg dark:bg-gray-800 lg:h-16 lg:w-16">
+                <svg class="w-5 h-5 text-primary-300 lg:w-8 lg:h-8 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
             </div>
-            <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Teléfonos:</p>
-            <ul class="text-gray-500 dark:text-gray-400">
-                <li class="hover:font-bold dark:hover:text-white"><strong>Administrativo: </strong><a href={'tel:' + telAdminLinkeable}>{telAdminReadble}</a></li>
-                <li class="hover:font-bold dark:hover:text-white"><strong>Administrativo: </strong><a href={'tel:' + telAdmin2Linkeable}>{telAdmin2Readble}</a></li>
+            <p class="mb-2 text-xl font-bold text-white dark:text-white">Teléfonos:</p>
+            <ul class="text-gray-300 dark:text-gray-400">
+                <li class="hover:font-bold dark:hover:text-white"><strong>Administración: </strong><a href={'tel:' + telAdminLinkeable}>{telAdminReadble}</a></li>
+                <li class="hover:font-bold dark:hover:text-white"><strong>Administración: </strong><a href={'tel:' + telAdmin2Linkeable}>{telAdmin2Readble}</a></li>
                 <li class="hover:font-bold dark:hover:text-white"><strong>Mecánicos: </strong><a href={'tel:' + telMechanicLinkeable}>{telMechanicReadble}</a></li>
                 <li class="hover:font-bold dark:hover:text-white"><strong>Mecánicos: </strong><a href={'tel:' + telMechanic2Linkeable}>{telMechanic2Readble}</a></li>
                 <li class="hover:font-bold dark:hover:text-white"><strong>Repuestos: </strong><a href={'tel:' + telPartsLinkeable}>{telPartsReadble}</a></li>
             </ul>
         </div>
         <div>
-            <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-gray-100 rounded-lg dark:bg-gray-800 lg:h-16 lg:w-16">
-                <svg class="w-5 h-5 text-gray-600 lg:w-8 lg:h-8 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44"/></svg>
+            <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-gray-700 rounded-lg dark:bg-gray-800 lg:h-16 lg:w-16">
+                <svg class="w-5 h-5 text-primary-300 lg:w-8 lg:h-8 dark:text-primary-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44"/></svg>
             </div>
-            <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">E-mail</p>
-            <p class="text-gray-500 dark:text-gray-400 hover:font-bold dark:hover:text-white"><a href={'mailto:' + email}> {email}</a></p>
+            <p class="mb-2 text-xl font-bold text-white dark:text-white">E-mail</p>
+            <p class="text-gray-300 dark:text-gray-400 hover:font-bold dark:hover:text-white"><a href={'mailto:' + email}> {email}</a></p>
         </div>
     </div>
 </section>

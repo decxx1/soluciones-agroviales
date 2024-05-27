@@ -64,16 +64,15 @@ const {
 	</head>
 	<body class="font-OpenSans scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700">
 		<div class="fixed left-0 top-0 -z-10 h-full w-full">
-			<div class="relative h-full w-full bg-gray-900">
-				
-				<div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#374151,#111827)]">
+			<div class="relative h-full w-full bg-gray-800 dark:bg-gray-900">
+				<div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#374151,#1f2937)] dark:bg-[radial-gradient(circle_400px_at_50%_300px,#374151,#111827)]">
 				</div>
 			</div>
 		</div>
 		<main>
-				<slot />
-			</main>
-			<WhatsApp />
+			<slot />
+		</main>
+		<WhatsApp />
 		<Footer />
 	</body>
 </html>
@@ -88,11 +87,11 @@ initDropdowns();
 </script>
 <!--  DARK MODE -->
 <script is:inline>
-	if (!('initColorMode' in localStorage) || localStorage.getItem('color-theme') === 'dark' ||
+	if (localStorage.getItem('color-theme') === 'dark' ||
 		(!('color-theme' in localStorage) &&
 			window.matchMedia('(prefers-color-scheme: dark)').matches)
 	) {
-		localStorage.setItem('initColorMode', true);
+		// localStorage.setItem('initColorMode', true);
 		document.documentElement.classList.add('dark');
 	} else {
 		document.documentElement.classList.remove('dark');

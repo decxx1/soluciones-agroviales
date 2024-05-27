@@ -4,6 +4,9 @@ import Header from '@/components/Header.astro';
 import ContactForm from '@/components/ContactForm.astro';
 import ContactInfo from '@/components/ContactInfo.astro';
 import CTAResume from '@/components/CTAResume.astro';
+import {
+    secretKey,
+} from '@/hooks/env.js';
 ---
 
 <Layout 
@@ -17,8 +20,8 @@ import CTAResume from '@/components/CTAResume.astro';
     <section class="container mx-auto">
         <div class="pt-8 px-4 mx-auto max-w-screen-xl lg:pt-16 lg:px-6">
             <div class="px-4 mx-auto max-w-screen-sm text-center lg:px-6 mb-8 lg:mb-16">
-                <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Contáctenos</h1>
-                <p class="font-light text-gray-600 dark:text-gray-400 sm:text-xl">Obtenga cotización sin cargo</p>
+                <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-primary-300 dark:text-primary-300">Contáctenos</h1>
+                <p class="font-light text-gray-300 dark:text-gray-400 sm:text-xl">Obtenga cotización sin cargo</p>
             </div>
         </div>
     </section>
@@ -26,3 +29,5 @@ import CTAResume from '@/components/CTAResume.astro';
     <ContactForm />
     <CTAResume />
 </Layout>
+<!-- recaptcha v3 -->
+<script async src={'https://www.google.com/recaptcha/api.js?render=' + secretKey}></script>
