@@ -8,39 +8,35 @@ export default function ColorModeSwitcher() {
 		// toggle icons
 		setIconDark(!iconDark);
 		// if set via local storage previously
-		if (localStorage.getItem("color-theme")) {
-			if (localStorage.getItem("color-theme") === "light") {
-				document.documentElement.classList.add("dark");
-				localStorage.setItem("color-theme", "dark");
-			} else {
-				document.documentElement.classList.remove("dark");
-				localStorage.setItem("color-theme", "light");
-			}
+		if (localStorage.getItem('color-theme')) {
+            if (localStorage.getItem('color-theme') === 'light') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            }
 
-			// if NOT set via local storage previously
-		} else {
-			if (document.documentElement.classList.contains("dark")) {
-				document.documentElement.classList.remove("dark");
-				localStorage.setItem("color-theme", "light");
-			} else {
-				document.documentElement.classList.add("dark");
-				localStorage.setItem("color-theme", "dark");
-			}
-		}
+            // if NOT set via local storage previously
+        } else {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
 		document.dispatchEvent(event);
 	};
 
 	useEffect(() => {
 		// Change the icons inside the button based on previous settings
-		if (
-			localStorage.getItem("color-theme") === "dark" ||
-			(!("color-theme" in localStorage) &&
-				window.matchMedia("(prefers-color-scheme: dark)").matches)
-		) {
+		if (localStorage.getItem('color-theme') === 'dark' ) {
 			setIconDark(true);
-		} else {
-			setIconDark(false);
-		}
+        } else {
+            setIconDark(false);
+        }
 	}, []);
 
 	return (
@@ -49,6 +45,7 @@ export default function ColorModeSwitcher() {
 				onClick={() => themeToggle()}
 				id="theme-toggle"
 				type="button"
+                data-tooltip-target="tooltip-toggle"
 				className="text-gray-300 hover:text-white hover:bg-gray-600 dark:hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-600 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
 			>
 				{!iconDark && (
