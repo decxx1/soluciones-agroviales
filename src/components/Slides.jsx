@@ -54,7 +54,6 @@ export default () => {
         {brands.map((brand) => (
           <swiper-slide
             key={brand.alt}
-            lazy="true"
             style={{marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
           >
             <img loading="lazy" src={brand.src} alt={brand.alt} width={brand.width} />
