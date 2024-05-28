@@ -4,6 +4,7 @@ import Header from '@/components/Header.astro';
 import AboutPresentation from '@/components/AboutPresentation.astro';
 import AboutLogo from '@/components/AboutLogo.astro';
 import CTAResume from '@/components/CTAResume.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 ---
 
 <Layout 
@@ -15,6 +16,11 @@ import CTAResume from '@/components/CTAResume.astro';
 	preLoad="images/about.webp"
 >
     <Header />
+	<Breadcrumb 
+		page="Sobre Nosotros"
+		title="Sobre Nosotros"
+		description="Con más de 30 años ofrecemos Soluciones completas para equipos de maquinarias viales"
+	/>
     <AboutPresentation />
     <AboutLogo />
     <CTAResume />

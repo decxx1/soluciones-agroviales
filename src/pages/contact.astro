@@ -7,6 +7,7 @@ import CTAResume from '@/components/CTAResume.astro';
 import {
     secretKey,
 } from '@/hooks/env.js';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 ---
 
 <Layout 
@@ -17,14 +18,11 @@ import {
 	metaImg="https://solucionesagrovialeshm.com.ar/images/logo-meta.webp"
 >
     <Header />
-    <section class="container mx-auto">
-        <div class="pt-8 px-4 mx-auto max-w-screen-xl lg:pt-16 lg:px-6">
-            <div class="px-4 mx-auto max-w-screen-sm text-center lg:px-6 mb-8 lg:mb-16">
-                <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-primary-300 dark:text-primary-300">Contáctenos</h1>
-                <p class="font-light text-gray-300 dark:text-gray-400 sm:text-xl">Obtenga cotización sin cargo</p>
-            </div>
-        </div>
-    </section>
+    <Breadcrumb 
+		page="Contacto"
+		title="Contáctenos"
+		description="Obtenga cotización sin cargo"
+	/>
     <ContactInfo />
     <ContactForm />
     <CTAResume />
