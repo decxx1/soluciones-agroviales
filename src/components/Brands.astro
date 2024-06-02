@@ -23,7 +23,7 @@ import brands from '@/data/Brands.json'
     <!-- Carousel -->
     <div id="controls-carousel" class="relative w-full md:hidden" data-carousel="static">
         <!-- Carousel wrapper -->
-        <div class="relative h-32 sm:h-40 overflow-hidden rounded-lg">
+        <div class="relative h-32 sm:h-40 overflow-hidden rounded">
             {brands.map((brand) => (
                 <div class="hidden duration-700 ease-in-out p-4 text-center bg-gray-600 rounded hover:bg-gray-500 dark:hover:bg-gray-600 dark:bg-gray-700" data-carousel-item>
                     <img loading="lazy" src={brand.src} alt={brand.alt} class="absolute block w-72 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
