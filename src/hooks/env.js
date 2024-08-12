@@ -17,3 +17,4 @@ export const mapUrl = import.meta.env.PUBLIC_MAP_URL;
 export const mapIframe = import.meta.env.PUBLIC_MAP_IFRAME;
 export const endPoint = import.meta.env.PUBLIC_ENDPOINT;
 export const secretKey = import.meta.env.PUBLIC_SECRET_KEY;
+export const siteKey = import.meta.env.PUBLIC_SITE_KEY;

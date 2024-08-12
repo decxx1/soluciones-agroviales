@@ -5,7 +5,7 @@ import ContactForm from '@/components/ContactForm.astro';
 import ContactInfo from '@/components/ContactInfo.astro';
 import CTAResume from '@/components/CTAResume.astro';
 import {
-    secretKey,
+    siteKey,
 } from '@/hooks/env.js';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 ---
@@ -28,4 +28,4 @@ import Breadcrumb from '@/components/Breadcrumb.astro';
     <CTAResume />
 </Layout>
 <!-- recaptcha v3 -->
-<script async src={'https://www.google.com/recaptcha/api.js?render=' + secretKey}></script>
+<script async src={'https://www.google.com/recaptcha/api.js?render=' + siteKey}></script>
