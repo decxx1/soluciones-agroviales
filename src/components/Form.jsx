@@ -24,7 +24,6 @@ export default function Form () {
             grecaptcha.ready(function() {
                 grecaptcha.execute(siteKey, { action: 'contacto' }).then(function(getToken) {
                     fields.token = getToken;
-                    
                     sendForm(fields);
                 });
             });
