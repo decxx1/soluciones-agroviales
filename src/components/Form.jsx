@@ -5,6 +5,7 @@ import {
     secretKey,
     siteKey,
     endPoint,
+    email
 } from '@/hooks/env.js';
 
 export default function Form () {
@@ -17,7 +18,7 @@ export default function Form () {
         event.preventDefault();
         const fields = Object.fromEntries(new FormData(event.target))
         fields.secret_key = secretKey;
-        fields.addressee = 'decxx1@gmail.com';
+        fields.addressee = email;
         fields.asunto = "Contacto desde la web - de: " + fields.name;
         if(!isSending){
             setIsSending(true);
